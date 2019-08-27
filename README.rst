@@ -36,10 +36,10 @@ Using as a plugin to a telegram userbot:
 
 Like what you see?
 -----------------
-⭐️ Please star the repository and share with your frens! ⭐️
+⭐️ Star the repository and share with your friends! ⭐️
 
 *Really* like what you see?
 -----------------
-*Please feel free to buy me some marshmallows* 😁
+*Feel free to buy me some marshmallows* 😁
 
 :Bitcoin: 1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC
