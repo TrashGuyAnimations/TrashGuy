@@ -33,3 +33,11 @@ Using as a plugin to a telegram userbot:
     for frame in trash_animation:
         asyncio.sleep(0.3)  # external library for sleeping between frames
         message.edit(frame)  # Plays back the animation frame by frame in real time
+
+Like what you see?
+--------------
+Buy me some marshmallows:
+
+.. epigraph::
+
+1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC
