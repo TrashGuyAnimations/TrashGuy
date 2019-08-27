@@ -30,7 +30,7 @@ Using as a plugin to a telegram userbot:
     
     # {client and handler code omitted}
     
-    user_input = message.text.split()  # input from a given message
+    user_input = event.message.text.split()  # input from a given message
     
     # specifying keyword telegram properly formats the frames for viewing on telegram
     trash_animation = TrashGuy(user_input, telegram=True).animate()
