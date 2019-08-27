@@ -35,7 +35,7 @@ Using as a plugin to a telegram userbot:
     trash_animation = TrashGuy(user_input).animate()
     for frame in trash_animation:
         asyncio.sleep(0.3)  # external library for sleeping between frames
-        formatted = f'```{frame}```'  # tripple backticks necessary for monospacing the animation
+        formatted = f'`{frame}`'  # backticks necessary for monospacing the animation
         await event.edit(formatted)  # Plays back the animation frame by frame in real time
 
 Like what you see?
