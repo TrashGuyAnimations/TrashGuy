@@ -35,9 +35,7 @@ Using as a plugin to a telegram userbot:
         message.edit(frame)  # Plays back the animation frame by frame in real time
 
 Like what you see?
---------------
-Buy me some marshmallows:
+-----------------
+Please star the repository and if possible *buy me some marshmallows* 😁
 
-.. epigraph::
-
-1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC
+:Bitcoin: 1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC
