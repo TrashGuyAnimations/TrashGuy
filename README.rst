@@ -47,3 +47,10 @@ Like what you see?
 *Feel free to buy me some marshmallows* 😁
 
 :Bitcoin: 1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC
+
+
+⭐️ Supporters and Contributors
+-----------------
+`YouTwitFace`_ | Developed animation for Telegram userbots
+
+.. _YouTwitFace: http://github.com/YouTwitFace
