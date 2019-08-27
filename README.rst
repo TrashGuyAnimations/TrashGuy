@@ -51,6 +51,6 @@ Like what you see?
 
 ⭐️ Supporters and Contributors
 -----------------
-`YouTwitFace`_ | Developed Trash Guy animation for use with Telegram userbots
+`YouTwitFace`_ | Conceptualized Trash Guy animation for use with Telegram userbots
 
 .. _YouTwitFace: http://github.com/YouTwitFace
