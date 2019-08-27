@@ -2,7 +2,7 @@
 #                 Trash Guy Script                    #
 #                     (> ^_^)>                        #
 #              Made by Zac (t.me/Zacci)               #
-#                 Version 3.1.1-pi                    #
+#                 Version 3.1.2-pi                    #
 #         Donate:                                     #
 #         1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC          #
 # =================================================== #
