@@ -32,7 +32,7 @@ Using as a plugin to a telegram userbot:
     
     user_input = message.text.split()  # input from a given message
     
-    trash_animation = TrashGuy(user_input).animate()
+    trash_animation = TrashGuy(user_input, telegram=True).animate()
     for frame in trash_animation:
         asyncio.sleep(0.3)  # external library for sleeping between frames
         formatted = f'`{frame}`'  # backticks necessary for monospacing the animation
