@@ -1,6 +1,6 @@
 Trash Guy Script
 ===============
-The original Trash Guy animation, written in Python.
+The original Trash Guy animation, written in Python (> ^_^)>🗑
 
 Usage Examples
 -----------------
