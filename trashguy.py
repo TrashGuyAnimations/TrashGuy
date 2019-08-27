@@ -36,7 +36,7 @@ def main():
 
 
 class TrashGuy:
-    __SYMBOL_SPACE = '\u0020'
+    __SYMBOL_SPACE = '\u2800\u0020'
     __SYMBOL_DEFAULT = u'\u274C'
 
     def __init__(self, user_input: list = None, **kwargs):
