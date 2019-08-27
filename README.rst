@@ -36,6 +36,6 @@ Using as a plugin to a telegram userbot:
 
 Like what you see?
 -----------------
-Please star the repository and if possible *buy me some marshmallows* 😁
+Please star the repository ⭐️ and if possible *buy me some marshmallows* 😁
 
 :Bitcoin: 1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC
