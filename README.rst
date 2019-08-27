@@ -32,11 +32,11 @@ Using as a plugin to a telegram userbot:
     
     user_input = message.text.split()  # input from a given message
     
+    # specifying keyword telegram properly formats the frames for viewing on telegram
     trash_animation = TrashGuy(user_input, telegram=True).animate()
     for frame in trash_animation:
         asyncio.sleep(0.3)  # external library for sleeping between frames
-        formatted = f'`{frame}`'  # backticks necessary for monospacing the animation
-        await event.edit(formatted)  # plays back the animation frame by frame in real time
+        await event.edit(frame)  # plays back the animation frame by frame in real time
 
 Like what you see?
 -----------------
