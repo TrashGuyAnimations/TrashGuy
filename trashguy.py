@@ -2,7 +2,7 @@
 #                 Trash Guy Script                    #
 #                     (> ^_^)>                        #
 #              Made by Zac (t.me/Zacci)               #
-#                 Version 3.1.2-pi                    #
+#                 Version 3.1.4-pi                    #
 #         Donate:                                     #
 #         1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC          #
 # =================================================== #
@@ -58,6 +58,13 @@ class TrashGuy:
         self.symbol_right = str(options['symbol_right']).strip()
         self.telegram = bool(options['telegram'])
 
+    def __add(self, frames: list, frame):
+        tick = ['`']
+        if self.telegram:
+            frames.append(''.join(tick + list(frame) + tick))
+        else:
+            frames.append(''.join(list(frame)))
+
     def animate(self) -> list:
         """Dynamically generated frames of the animated trash guy using provided symbols."""
         trash_item_sequence = []
@@ -103,13 +110,13 @@ class TrashGuy:
                                 r_canvas[last_item_index] = sym_space
 
                             # Snapshot last frame looking left
-                            frames.append(''.join(reversed(r_canvas)))
+                            self.__add(frames, reversed(r_canvas))
 
                             # Set trash guy's previous position
                             r_canvas[index] = sym_right
 
                             # Snapshot before-last frame
-                            frames.append(''.join(reversed(r_canvas)))
+                            self.__add(frames, reversed(r_canvas))
 
                             # Remove trash guy from this position for next frame (which is the previous frame)
                             # (must be set to space character)
@@ -125,7 +132,7 @@ class TrashGuy:
                                 r_canvas[last_item_index] = sym_space
 
                             # Snapshot frame while moving towards trash can
-                            frames.append(''.join(reversed(r_canvas)))
+                            self.__add(frames, reversed(r_canvas))
 
                             # Clear the last two spaces for the next frame
                             r_canvas[index] = sym_space
@@ -142,7 +149,7 @@ class TrashGuy:
                     canvas[index] = sym_left
 
                     # Snapshot the frames of the animation going left for as long as there are whitespaces
-                    frames.append(''.join(canvas))
+                    self.__add(frames, canvas)
 
                     # Remove the previous position and continue
                     canvas[index] = sym_space
