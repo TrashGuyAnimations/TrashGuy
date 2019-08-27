@@ -36,7 +36,8 @@ def main():
 
 
 class TrashGuy:
-    __SYMBOL_SPACE = '\u2800\u0020'
+    __SYMBOL_SPACE = u'\u0020'
+    __SYMBOL_TG_SPACE = u'\u2800\u0020'
     __SYMBOL_DEFAULT = u'\u274C'
 
     def __init__(self, user_input: list = None, **kwargs):
@@ -47,13 +48,15 @@ class TrashGuy:
 
         options = {'symbol_trash': u'\U0001F5D1',
                    'symbol_left': '<(^_^ <)',
-                   'symbol_right': '(> ^_^)>'}
+                   'symbol_right': '(> ^_^)>',
+                   'telegram': True}
 
         options.update(kwargs)
 
         self.symbol_trash = str(options['symbol_trash']).strip()
         self.symbol_left = str(options['symbol_left']).strip()
         self.symbol_right = str(options['symbol_right']).strip()
+        self.telegram = bool(options['telegram'])
 
     def animate(self) -> list:
         """Dynamically generated frames of the animated trash guy using provided symbols."""
@@ -66,7 +69,8 @@ class TrashGuy:
         sym_trash = self.symbol_trash
         sym_left = self.symbol_left
         sym_right = self.symbol_right
-        sym_space = TrashGuy.__SYMBOL_SPACE
+
+        sym_space = TrashGuy.__SYMBOL_SPACE if not self.telegram else self.__SYMBOL_TG_SPACE
 
         trash_truncator = trash_length
         # The animation is created from right to left and bottom to up and then reversed at each frame step.
