@@ -49,7 +49,7 @@ class TrashGuy:
         options = {'symbol_trash': u'\U0001F5D1',
                    'symbol_left': '<(^_^ <)',
                    'symbol_right': '(> ^_^)>',
-                   'telegram': True}
+                   'telegram': False}
 
         options.update(kwargs)
 
