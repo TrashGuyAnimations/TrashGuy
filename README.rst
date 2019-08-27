@@ -26,6 +26,9 @@ Using as a plugin to a telegram userbot:
 .. code-block:: python
 
     from trashguy import TrashGuy
+    import asyncio
+    
+    # {client and handler code omitted}
     
     user_input = message.text.split()  # input from a given message
     
