@@ -72,7 +72,8 @@ To get your current python version type into the terminal:
     
     python -c "import sys;print(sys.version)"
     
-If there is no python installed please follow `this guide. 
+If the command fails to execute, it's possible that no python installation exists.
+In that case, please follow `this guide. 
 <https://realpython.com/installing-python/>`_ 
 
 Check the output of this command, it should say ``utf-8``.
