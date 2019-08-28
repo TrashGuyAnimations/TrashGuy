@@ -46,8 +46,8 @@ MacOS
 Windows
 ^^^^^^^
 
-Usage Example
-=============
+Usage Examples
+==============
 
 Using from the command line (space delimited arguments):
 
