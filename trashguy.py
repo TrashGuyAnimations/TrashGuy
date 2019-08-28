@@ -1,9 +1,8 @@
-# coding: utf8
 # =================================================== #
 #                 Trash Guy Script                    #
-#                    🗑️(> ^_^)>                       #
+#                     (> ^_^)>                        #
 #              Made by Zac (t.me/Zacci)               #
-#                 Version 3.1.4-pi                    #
+#                 Version 3.1.5-pi                    #
 #         Donate:                                     #
 #         1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC          #
 # =================================================== #
@@ -26,7 +25,8 @@ import sys
 
 def main():
     """Example usage of TrashGuy class."""
-    input_default = '🍓 🍅 🍊 🍋'.split()
+    # input_default = '🍓 🍅 🍊 🍋'.split()
+    input_default = ['\U0001F353', '\U0001F345', '\U0001F34A', '\U0001F34B']
 
     user_input = sys.argv[1:]
     if not user_input:
@@ -100,7 +100,7 @@ class TrashGuy:
             # Loop over the canvas to animate the trash guy going right while holding the item.
             for index in range(len(r_canvas)):
                 # Trash guy hits the item he wants to pickup
-                if r_canvas[index] == sym_space or r_canvas[index] == item:
+                if r_canvas[index] == sym_space or -index == last_item_index:
                     try:
                         if r_canvas[index - 1] == sym_trash:
                             # Looking left on the very final frame of the animation
