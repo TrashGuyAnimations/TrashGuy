@@ -26,7 +26,7 @@ Vim
     vim ~/.vimrc
 
 
-- Add these lines to the file:
+- Add these lines to the file if they don't exist:
 
 .. code-block::
 
@@ -63,6 +63,25 @@ If doing so still does not display the file correctly, try selecting ``Convert t
 
 Python Platform
 ---------------
+Trash Guy Script was written in ``Python 3.6.3``.
+Backwards compatibility has not yet been tested.
+
+To get your current python version type into the terminal:
+
+.. code-block:: bash
+    
+    python -c "print(__import__('sys').version)"
+    
+If there is no python installed please follow `this guide. 
+<https://realpython.com/installing-python/>`_ 
+
+Check the output of this command, it should say ``utf-8``.
+
+.. code-block:: bash
+
+    python -c "import sys;print(sys.stdout.encoding)"
+    
+**If it returns a value other than** ``utf-8`` **try to set the encoding with one of the following platform specific methods:**
 
 Operating Systems
 -----------------
