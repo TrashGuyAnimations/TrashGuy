@@ -106,6 +106,7 @@ Type the ``locale`` command again to confirm that ``LC_ALL=en_US.UTF-8`` has bee
     
 Android
 ^^^^^^^
+    The Android platform default is always UTF-8, however, if the code file does not display correctly, it may have been corrupted. Try     re-downloading it and try again. If that does not solve the problem, refer to the help documentation of the specific                     application/terminal emulator you are using with regards default encoding.
 
 MacOS
 ^^^^^
