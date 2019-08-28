@@ -39,6 +39,7 @@ Vim
 
     :wq
 
+|
 
 Emacs
 ^^^^^
@@ -48,10 +49,17 @@ You can change the encoding to use for the file when saving using ``C-x C-m f``.
 
 You can also mark the entire file with ``C-x h`` and then try ``M-x recode-region``. It will ask you for ``Text was really in`` and ``But was interpreted as``.
 
+|
 
 Notepad++
 ^^^^^^^^^
+You may set the character encoding in Notepad++ as shown in the below image:
 
+.. image:: images/npp.jpg
+
+If doing so still does not display the file correctly, try selecting ``Convert to UTF-8`` and then save the file.
+
+|
 
 Python Platform
 ---------------
