@@ -152,7 +152,17 @@ Using as a plugin to a telegram userbot:
         asyncio.sleep(0.3)  # external library for sleeping between frames
         await event.edit(frame)  # plays back the animation frame by frame in real time
 
+Setting custom symbols with keyword arguments:
+
+.. code-block:: python
+
+    trash_animation = TrashGuy(user_input, 
+                               symbol_trash='V', 
+                               symbol_left='<(-.- <)', 
+                               symbol_right='(> -.-)>').animate()
+
 |
+
 Like what you see?
 ==================
 ⭐️ Star the repository and share with your friends! ⭐️
