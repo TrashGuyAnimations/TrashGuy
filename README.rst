@@ -110,6 +110,14 @@ Android
 
 MacOS
 ^^^^^
+Navigate to ``Terminal -> Preferences`` from Terminal’s menu bar.
+
+.. image:: images/macos1.jpg
+
+In the Preferences window select the ``Settings -> Advanced`` tab. 
+Then, under the ``Charachter encoding`` drop-down box, select ``Unicode (UTF-8)`` and tick the box ``Set locale environment variables on startup``.
+
+.. image:: images/macos2.jpg
 
 Windows
 ^^^^^^^
