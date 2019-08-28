@@ -3,6 +3,7 @@ Trash Guy Script
 ================
 **The original Trash Guy animation, written in Python (> ^_^)>🗑**
 
+____________________________
 
 .. contents:: **Contents**
 
