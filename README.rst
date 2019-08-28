@@ -2,9 +2,8 @@
 Trash Guy Script
 ================
 **The original Trash Guy animation, written in Python (> ^_^)>🗑**
-
 ____________________________
-
+|
 .. contents:: **Contents**
 
 Installation Instructions
@@ -47,6 +46,7 @@ MacOS
 Windows
 ^^^^^^^
 
+|
 Usage Examples
 ==============
 
@@ -84,7 +84,7 @@ Using as a plugin to a telegram userbot:
         asyncio.sleep(0.3)  # external library for sleeping between frames
         await event.edit(frame)  # plays back the animation frame by frame in real time
 
-
+|
 Like what you see?
 ==================
 ⭐️ Star the repository and share with your friends! ⭐️
@@ -96,7 +96,7 @@ Like what you see?
 
 :Bitcoin: 1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC
 
-
+|
 ⭐️ Supporters and Contributors
 ==============================
 `YouTwitFace`_ | Conceptualized Trash Guy animation for use with Telegram userbots
