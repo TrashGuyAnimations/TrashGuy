@@ -6,6 +6,7 @@ Trash Guy Script
 ____________________________
 
 |
+
 .. contents:: **Contents**
 
 Setup Instructions
@@ -16,12 +17,27 @@ Setup Instructions
 
 Text Editors
 ------------
-Nano
-^^^^
-
-    
 Vim
 ^^^
+- Open the vimrc file:
+
+.. code-block:: bash
+
+    vim ~/.vimrc
+
+
+- Add these lines to the file:
+
+.. code-block::
+
+    set encoding=utf-8  " The encoding displayed.
+    set fileencoding=utf-8  " The encoding written to file
+
+- Save and close:
+
+.. code-block::
+
+    :wq
 
 
 Emacs
