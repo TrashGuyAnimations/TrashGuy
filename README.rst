@@ -9,22 +9,8 @@ Trash Guy Script
 Installation Instructions
 =========================
 
-Python Platform
----------------
-
-Operating Systems
------------------
-Linux
-^^^^^
-
-Android
-^^^^^^^
-
-MacOS
-^^^^^
-
-Windows
-^^^^^^^
+.. highlights::
+    The installation instructions are separated into three sections, the Python Platform, the Operating System and the Text Editor.         Please follow the instructions for each part of the three sections that applies to you in the given order of setup.
 
 Text Editors
 ------------
@@ -42,6 +28,23 @@ Emacs
 
 Notepad++
 ^^^^^^^^^
+
+Python Platform
+---------------
+
+Operating Systems
+-----------------
+Linux
+^^^^^
+
+Android
+^^^^^^^
+
+MacOS
+^^^^^
+
+Windows
+^^^^^^^
 
 Usage Example
 =============
