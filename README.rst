@@ -82,13 +82,28 @@ Check the output of this command, it should say ``utf-8``.
 
     python -c "import sys;print(sys.stdout.encoding)"
     
-**If it returns any other value try to set the default encoding with one of the following platform specific methods:**
+**If it returns any other value, try to set the default encoding with one of the following platform specific methods:**
 
 Operating Systems
 -----------------
 Linux
 ^^^^^
+Type this command to see your current locale settings:
 
+.. code-block:: bash
+
+    locale
+
+In the output of the command, check the variable ``LC_ALL=`` to see if it contains ``UTF-8``.
+If it does not, try setting it by using the following commands:
+
+.. code-block:: bash
+
+    locale-gen en_US.UTF-8
+    export LANG=en_US.UTF-8 LANGUAGE=en_US.en LC_ALL=en_US.UTF-8
+
+Type the ``locale`` command again to confirm that ``LC_ALL=en_US.UTF-8`` has been set.
+    
 Android
 ^^^^^^^
 
