@@ -81,7 +81,7 @@ Check the output of this command, it should say ``utf-8``.
 
     python -c "import sys;print(sys.stdout.encoding)"
     
-**If it returns a value other than** ``utf-8`` **try to set the encoding with one of the following platform specific methods:**
+**If it returns a value other than** ``utf-8``**, try to set the encoding with one of the following platform specific methods:**
 
 Operating Systems
 -----------------
