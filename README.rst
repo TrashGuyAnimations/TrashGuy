@@ -70,7 +70,7 @@ To get your current python version type into the terminal:
 
 .. code-block:: bash
     
-    python -c "print(__import__('sys').version)"
+    python -c "import sys;print(sys.version)"
     
 If there is no python installed please follow `this guide. 
 <https://realpython.com/installing-python/>`_ 
