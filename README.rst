@@ -103,7 +103,9 @@ If it does not, try setting it by using the following commands:
     export LANG=en_US.UTF-8 LANGUAGE=en_US.en LC_ALL=en_US.UTF-8
 
 Type the ``locale`` command again to confirm that ``LC_ALL=en_US.UTF-8`` has been set.
-    
+
+To confirm that the default encoding has been successfully set, use the code in the snippet `here. <#python-platform>`_
+
 Android
 ^^^^^^^
     The Android platform default is always UTF-8, however, if the code file does not display correctly, it may have been corrupted. Try     re-downloading it and try again. If that does not solve the problem, refer to the help documentation of the specific                     application/terminal emulator you are using with regards default encoding.
@@ -119,8 +121,19 @@ Then, under the ``Charachter encoding`` drop-down box, select ``Unicode (UTF-8)`
 
 .. image:: images/macos2.jpg
 
+To confirm that the default encoding has been successfully set, use the code in the snippet `here. <#python-platform>`_
+
 Windows
 ^^^^^^^
+Go to ``Start -> Edit environment variables for your account`` or 
+``Start -> Edit the system environment variables -> Environment Variables...``
+From the ``System variables`` section, click on ``New..``
+Under the ``Variable name:`` type in ``PYTHONIOENCODING``
+Under the ``Variable value:`` type in ``utf-8``
+
+.. image:: images/windows.jpg
+
+To confirm that the default encoding has been successfully set, use the code in the snippet `here. <#python-platform>`_
 
 |
 Usage Examples
