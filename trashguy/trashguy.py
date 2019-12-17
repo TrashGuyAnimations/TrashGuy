@@ -16,6 +16,8 @@
 # above copyright notice and this permission notice shall be included in all  #
 # copies or substantial portions of the Software.                             #
 # =========================================================================== #
+# FREEDOOM FREEDOOM FREEDOOM FREEDOOM FREEDOOM FREEDOOM FREEDOOM FREEDOOM FREEDOOM FREEDOOM
+
 from typing import Union, Iterator, Tuple
 from ._types import SpriteVars, SliceVars
 from ._frame_engine import FrameEngine

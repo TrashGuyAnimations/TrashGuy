@@ -1,10 +1,3 @@
-# uncompyle6 version 3.6.0
-# Python bytecode 3.6 (3379)
-# Decompiled from: Python 3.8.0 (default, Dec 14 2019, 23:51:55) 
-# [GCC 7.4.0]
-# Embedded file name: .\_frame_engine.py
-# Compiled at: 2019-12-15 22:13:24
-# Size of source mod 2**32: 5401 bytes
 from ._types import FrameGroupVars, ConversionVars, SpriteVars, SliceVars
 from statistics import median
 
@@ -91,4 +84,3 @@ class FrameEngine:
                     canvas[last_index] = spr.spacer
 
             return FrameEngine.wrap(spr, canvas)
-# okay decompiling _frame_engine.pyc
