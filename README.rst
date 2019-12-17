@@ -258,12 +258,12 @@ Special thanks to the folks down at `Telethon Off-topic <https://t.me/telethonof
 .. |build| image:: https://travis-ci.com/trash-guy/TrashGuy.svg?branch=master
     :target: https://travis-ci.com/trash-guy/TrashGuy
 
-.. |lic| image:: https://img.shields.io/github/license/trash-guy/trashguy
+.. |lic| image:: https://img.shields.io/badge/license-All%20Rights%20Reserved-brightgreen
     :target: https://github.com/trash-guy/TrashGuy/blob/master/LICENSE
-    
+
 .. |ver| image:: https://img.shields.io/badge/version-4.0.0+20191217-orange
     :target: https://github.com/trash-guy/TrashGuy/
-    
+
 .. |lastcom| image:: https://img.shields.io/github/last-commit/trash-guy/trashguy
 
 .. |platforms| image:: https://img.shields.io/badge/python-3.4%20%7C%203.5%20%7C%203.6%20%7C%203.7-lightgrey
