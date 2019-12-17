@@ -1,4 +1,4 @@
 ﻿language: python
 
 script:
-  - python setup.py install
+  - python -m trashguy < travis.txt
