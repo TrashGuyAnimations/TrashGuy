@@ -7,7 +7,7 @@
 .. raw:: html
 
     <embed>
-        <h2>The original Trash Guy Script, written in Python!</h2>
+        <h2>The original Trash Guy animation!</h2>
     </embed>
 
 |
