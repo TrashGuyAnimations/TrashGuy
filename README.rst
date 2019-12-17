@@ -259,8 +259,10 @@ Special thanks to the folks down at `Telethon Off-topic <https://t.me/telethonof
 .. _`Donate a Gift Card`: https://www.amazon.de/Digitaler-Amazon-Gutschein-Blaues-Amazon/dp/B07Q1JNC7R?language=en_GB
 
 .. |banner| image:: images/banner.png
+    :width: 70%
 
 .. |logo| image:: https://img.shields.io/badge/%F0%9F%97%91%EF%B8%8F-%3C%28%5E__%5E%20%3C%29-black
+    :target: https://travis-ci.com/trash-guy/TrashGuy
 
 .. |build| image:: https://travis-ci.com/trash-guy/TrashGuy.svg?branch=master
     :target: https://travis-ci.com/trash-guy/TrashGuy
@@ -272,6 +274,7 @@ Special thanks to the folks down at `Telethon Off-topic <https://t.me/telethonof
     :target: https://github.com/trash-guy/TrashGuy/
 
 .. |lastcom| image:: https://img.shields.io/github/last-commit/trash-guy/trashguy
+    :target: https://travis-ci.com/trash-guy/TrashGuy
 
 .. |platforms| image:: https://img.shields.io/badge/python-3.4%20%7C%203.5%20%7C%203.6%20%7C%203.7-lightgrey
     :target: https://github.com/trash-guy/TrashGuy/blob/master/README.rst#python-platform
