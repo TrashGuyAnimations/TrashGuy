@@ -117,8 +117,7 @@ class TrashGuy:
                 raise IndexError("trashguy index out of range")
             return FrameEngine.get_frame(self.slices, self.sprites, i)
         else:
-            raise TypeError("trashguy indices must be integers or slices, "
-                            f"not {type(i)}")
+            raise TypeError(f"trashguy indices must be integers or slices, not {type(i)}")
 
     def __iter__(self):
         return self
