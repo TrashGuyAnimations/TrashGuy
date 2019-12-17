@@ -35,7 +35,13 @@ from .trashguy import TrashGuy, Symbols
 
 
 def main(trash_items):
-    print(TrashGuy(*trash_items))
+    trash_animation: TrashGuy = TrashGuy(*trash_items)
+    for frame in trash_animation:
+        print(frame, end='', flush=True)
+
+        # ANSI codes (http://www.termsys.demon.co.uk/vtansi.htm)
+        print(f'\x1b[1K\x1b[{len(frame) ** 2}D',
+              end='')
 
 
 cmd_input = sys.argv[1:]
