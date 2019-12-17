@@ -244,7 +244,7 @@ If you rewrite this software in a different programming language or create a der
                      Click on **Email** and send to **z_donate@protonmail.ch**
 
                      Or, click on **Share via messaging** and send to **https://t.me/Zacci**
-    Bitcoin          1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC
+    Bitcoin          1Czj9ibbJ6STDQkPbHZxJtoAHiLua3DbUU
 ===================  ====
 
 |
