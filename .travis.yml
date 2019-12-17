@@ -1,0 +1,4 @@
+﻿language: python
+
+script:
+  - python setup.py install
