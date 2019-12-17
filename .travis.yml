@@ -1,4 +1,4 @@
 ﻿language: python
 
 script:
-  - python -m trashguy 🍓🍊🍅 < travis.txt
+  - python -m trashguy 🍓🍊🍅

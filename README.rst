@@ -7,7 +7,7 @@
 .. raw:: html
 
     <embed>
-        <h2>The original Trash Guy animation!</h2>
+        <h2>The original Trash Guy animation, written in Python!</h2>
     </embed>
 
 |
@@ -191,7 +191,8 @@ To confirm that the default encoding has been successfully set, use the code in 
 
 Android
 ^^^^^^^
-    The Android platform default is always UTF-8, however, if the code file does not display correctly, it may have been corrupted. Try     re-downloading it and try again. If that does not solve the problem, refer to the help documentation of the specific                     application/terminal emulator you are using with regards default encoding.
+    The Android platform default is always UTF-8, however, if the code file does not display correctly, it may have been corrupted. 
+    Try re-downloading it and try again. If that does not solve the problem, refer to the help documentation of the specific application/terminal emulator you are using with regards default encoding.
 
 MacOS
 ^^^^^
@@ -223,6 +224,12 @@ To confirm that the default encoding has been successfully set, use the code in 
 Like what you see?
 ==================
 ⭐️ Star the repository and share with your friends! ⭐️
+
+If you rewrite this software in a different programming language or create a derivative work, please be kind and include this notice and the below credit along with the license:
+
+.. highlights::
+
+    This work is based on the original TrashGuy animation (https://github.com/trash-guy/TrashGuy) written by Zac (https://t.me/Zacci).
 
 
 *Really* like what you see?
@@ -258,7 +265,7 @@ Special thanks to the folks down at `Telethon Off-topic <https://t.me/telethonof
 .. |build| image:: https://travis-ci.com/trash-guy/TrashGuy.svg?branch=master
     :target: https://travis-ci.com/trash-guy/TrashGuy
 
-.. |lic| image:: https://img.shields.io/badge/license-All%20Rights%20Reserved-brightgreen
+.. |lic| image:: https://img.shields.io/github/license/trash-guy/TrashGuy
     :target: https://github.com/trash-guy/TrashGuy/blob/master/LICENSE
 
 .. |ver| image:: https://img.shields.io/badge/version-4.0.0+20191217-orange
