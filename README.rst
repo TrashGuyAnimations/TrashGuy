@@ -259,7 +259,7 @@ Special thanks to the folks down at `Telethon Off-topic <https://t.me/telethonof
 .. _`Donate a Gift Card`: https://www.amazon.de/Digitaler-Amazon-Gutschein-Blaues-Amazon/dp/B07Q1JNC7R?language=en_GB
 
 .. |banner| image:: images/banner.png
-    :width: 200px
+    :width: 70px
 
 .. |logo| image:: https://img.shields.io/badge/%F0%9F%97%91%EF%B8%8F-%3C%28%5E__%5E%20%3C%29-black
     :target: https://travis-ci.com/trash-guy/TrashGuy
