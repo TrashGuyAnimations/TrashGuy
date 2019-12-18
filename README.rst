@@ -1,8 +1,7 @@
-﻿.. Version 4.0.0+20191217
-
+﻿
 |banner|
 
-|logo| |ver| |lic| |build| |lastcom| |platforms| |chat| |donations| |btc| |badgecount|
+|logo| |ver| |pyver| |lic| |build| |code| |size| |status| |lastcom| |platforms| |chat| |donations| |btc| |badgecount|
 
 .. raw:: html
 
@@ -18,6 +17,14 @@ Installation Instructions
 =========================
 
 .. code-block:: bash
+
+    pip install trashguy
+
+Or if cloning from repo:
+
+.. code-block:: bash
+
+    git clone https://github.com/trash-guy/TrashGuy.git
 
     python setup.py install
 
@@ -259,7 +266,6 @@ Special thanks to the folks down at `Telethon Off-topic <https://t.me/telethonof
 .. _`Donate a Gift Card`: https://www.amazon.de/Digitaler-Amazon-Gutschein-Blaues-Amazon/dp/B07Q1JNC7R?language=en_GB
 
 .. |banner| image:: images/banner.png
-    :width: 70px
 
 .. |logo| image:: https://img.shields.io/badge/%F0%9F%97%91%EF%B8%8F-%3C%28%5E__%5E%20%3C%29-black
     :target: https://travis-ci.com/trash-guy/TrashGuy
@@ -270,13 +276,25 @@ Special thanks to the folks down at `Telethon Off-topic <https://t.me/telethonof
 .. |lic| image:: https://img.shields.io/github/license/trash-guy/TrashGuy
     :target: https://github.com/trash-guy/TrashGuy/blob/master/LICENSE
 
-.. |ver| image:: https://img.shields.io/badge/version-4.0.0+20191217-orange
+.. |ver| image:: https://img.shields.io/badge/version-4.0.0+20191218-orange
+    :target: https://github.com/trash-guy/TrashGuy/
+
+.. |pyver| image:: https://img.shields.io/pypi/v/trashguy
+    :target: https://pypi.org/project/trashguy/
+
+.. |code| image:: https://img.shields.io/codacy/grade/db35c54b78f44c3ab59a98bff8e2c47b
+    :target: https://app.codacy.com/manual/trash-guy/TrashGuy
+
+.. |status| image:: https://img.shields.io/pypi/status/trashguy
+    :target: https://pypi.org/project/trashguy/
+
+.. |size| image:: https://img.shields.io/github/repo-size/trash-guy/TrashGuy
     :target: https://github.com/trash-guy/TrashGuy/
 
 .. |lastcom| image:: https://img.shields.io/github/last-commit/trash-guy/trashguy
     :target: https://travis-ci.com/trash-guy/TrashGuy
 
-.. |platforms| image:: https://img.shields.io/badge/python-3.4%20%7C%203.5%20%7C%203.6%20%7C%203.7-lightgrey
+.. |platforms| image:: https://img.shields.io/pypi/pyversions/trashguy
     :target: https://github.com/trash-guy/TrashGuy/blob/master/README.rst#python-platform
 
 .. |donations| image:: https://img.shields.io/badge/donated%20gift%20cards-%E2%82%AC%200.00-yellow
@@ -288,5 +306,5 @@ Special thanks to the folks down at `Telethon Off-topic <https://t.me/telethonof
 .. |chat| image:: https://img.shields.io/badge/telegram-ZN%20Spam-critical
     :target: https://t.me/botspamdebug
 
-.. |badgecount| image:: https://img.shields.io/badge/badge%20count-10-blueviolet
+.. |badgecount| image:: https://img.shields.io/badge/badge%20count-14-blueviolet
     :target: https://shields.io/
