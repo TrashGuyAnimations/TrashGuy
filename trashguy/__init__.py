@@ -2,7 +2,7 @@
 #                Trash Guy Animation                #
 #                     (> ^_^)>                      #
 #              Made by Zac (t.me/Zacci)             #
-#               Version 4.0.0+20191218              #
+#               Version 4.0.1+20191218              #
 #         Donate:                                   #
 #         1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC        #
 # ================================================= #
@@ -35,4 +35,3 @@ from . import version
 __version__ = version.__version__
 
 __all__ = ['TrashGuy', 'Symbols']
-

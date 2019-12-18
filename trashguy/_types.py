@@ -2,7 +2,7 @@
 #                Trash Guy Animation                #
 #                     (> ^_^)>                      #
 #              Made by Zac (t.me/Zacci)             #
-#               Version 4.0.0+20191218              #
+#               Version 4.0.1+20191218              #
 #         Donate:                                   #
 #         1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC        #
 # ================================================= #
@@ -30,25 +30,24 @@
 #       written by Zac (https://t.me/Zacci).        #
 #                                                   #
 # ================================================= #
-from typing import NamedTuple, Tuple
+from typing import NamedTuple, Union, Tuple
 
-FrameGroupVars = NamedTuple('FrameGroupVars',
-                            fg_sizes=range,
-                            total_frame_count=int)
 
-ConversionVars = NamedTuple('ConversionVars',
-                            position=int,
-                            forward=bool,
-                            item_index=int)
+class FrameGroupVars(NamedTuple):
+    fg_sizes: range
+    total_frame_count: int
 
-SpriteVars = NamedTuple('SpriteVars',
-                        trash_items=Tuple[str, ...],
-                        sprite_trash=str,
-                        sprite_left=str,
-                        sprite_right=str,
-                        spacer=str,
-                        wrapper=str)
 
-SliceVars = NamedTuple('SliceVars',
-                       frame_start=int,
-                       frames_max=int)
+class ConversionVars(NamedTuple):
+    position: int
+    forward: bool
+    item_index: int
+
+
+class SpriteVars(NamedTuple):
+    trash_items: tuple
+    sprite_trash: str
+    sprite_left: str
+    sprite_right: str
+    spacer: str
+    wrapper: Union[str, Tuple[str, str]]

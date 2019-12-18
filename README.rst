@@ -1,17 +1,14 @@
-﻿
-|banner|
+﻿|banner|
 
 |logo| |ver| |pyver| |lic| |build| |code| |size| |status| |lastcom| |platforms| |chat| |donations| |btc| |badgecount|
 
-.. raw:: html
+====================================================
+The original Trash Guy animation, written in Python!
+====================================================
+.. contents:: Contents
+   :local:
+   :depth: 1
 
-    <embed>
-        <h2>The original Trash Guy animation, written in Python!</h2>
-    </embed>
-
-|
-
-.. contents:: **Contents**
 
 Installation Instructions
 =========================
@@ -28,6 +25,51 @@ Or if cloning from repo:
 
     python setup.py install
 
+Brief Documentation
+===================
+Input Arguments
+---------------
+===================  ================  =============================================================  ======================
+**Input Arguments**  **Accepts**       **Description**                                                **Default Value**
+-------------------  ----------------  -------------------------------------------------------------  ----------------------
+trash_items          String arguments  The item(s) for throwing away 1 character at a time            N/a
+sprite_can           String            The emoji/string to be used as the trash can                   Symbols.SPRITE_CAN
+sprite_left          String            The string to be used for the left-facing trash guy            Symbols.SPRITE_LEFT
+sprite_right         String            The string to be used for the right-facing trash guy           Symbols.SPRITE_RIGHT
+spacer               String            The character/string to be used for spacing the canvas         Symbols.SPACER_DEFAULT
+wrapper              String or         The character/string to be used for wrapping each frame        N/a
+                     Tuple[str,str]    of the animation for use with markdown/HTML formatting
+                                       If provided as a single string, each frame will be
+                                       pre-pended and appended with the same character.
+                                       i.e. ``wrapper="A"`` becomes ``"A{frame}A"``
+                                       If provided as a tuple of two strings, each frame will
+                                       be pre-pended with the first string and appended to
+                                       with the second string.
+                                       i.e. ``wrapper=("<b>", "</b>")`` becomes ``"<b>{frame}</b>"``
+===================  ================  =============================================================  ======================
+
+Symbols Class
+-------------
+.. highlights::
+   Constants from the Symbols class are meant to be used as shortcuts to commonly used strings and symbols. Additionally, they are also used as default values for the input arguments as shown above. However, they are not required for the correct functioning of the animation and can be substituted with custom values of the indicated type. Please note there may be unintended results when using custom values.
+
+==============  ========  =====================  ========================
+**Symbols**     **Type**  **Value**              **Rendered As**
+--------------  --------  ---------------------  ------------------------
+DEFAULT_INPUT   Tuple     ("\\U0001F353",         "🍓🍊🍅"
+                          "\\U0001F34A",
+                          "\\U0001F345")
+SPACER_DEFAULT  String    "\\u0020"              " "
+SPACER_WIDE     String    "\\u2800\\u0020"       "⠀ "
+SPACER_EMOJI    String    "\\u2796"              "➖"
+MARKDOWN_CODE   String    "`````"                ```{frame}```
+MARKDOWN_PRE    String    "```````"              `````{frame}`````
+HTML_CODE       Tuple     ("<code>", "</code>")  ``<code>{frame}</code>``
+HTML_PRE        Tuple     ("<pre>", "</pre>")    ``<pre>{frame}</pre>``
+SPRITE_CAN      String    "\\U0001F5D1"          "🗑"
+SPRITE_LEFT     String    "<(^_^ <)"
+SPRITE_RIGHT    String    "(> ^_^)>"
+==============  ========  =====================  ========================
 
 Usage Examples
 ==============
@@ -69,13 +111,9 @@ Usage Examples
 
     user_input = event.message.text  # input from a given message
 
-    # Specifying keyword 'spacer=Symbols.SPACER_WIDE' prevents telegram from
-    # stripping leading spaces in the animation, the default is 'Symbols.SPACER_DEFAULT'.
-    # Specifying a value for keyword 'wrap' will wrap each frame of the animation
-    # in the provided string.
     trash_animation = TrashGuy(user_input,
                                spacer=Symbols.SPACER_WIDE,
-                               wrapper=Symbols.WRAPPER_MONOSPACE)  # single backtick
+                               wrapper=Symbols.MARKDOWN_CODE)
 
     for frame in trash_animation:
         asyncio.sleep(0.4)  # external library for sleeping between frames
@@ -86,23 +124,51 @@ Usage Examples
 .. code-block:: python
 
     from trashguy import TrashGuy, Symbols
+    import asyncio
+
+    # {client and handler code omitted}
+
+    user_input = event.message.text  # input from a given message
 
     trash_animation = TrashGuy(user_input,
                                sprite_can='\u2A06',
                                sprite_left='<(-.- <)',
                                sprite_right='(> -.-)>',
-                               spacer=Symbols.SPACER_EMOJI,
-                               wrapper=Symbols.WRAPPER_BLOCK_MONO)  # triple backticks
+                               spacer=Symbols.SPACER_EMOJI)
 
-    print(trash_animation)  # outputs entire animation with each frame separated by newline
+    # outputs entire animation with each frame separated by newline with pre-formatted code block markdown
+    triple_backticks = Symbols.MARKDOWN_PRE
+
+    # equivalent to
+    # event.reply(f'```{trash_animation}```')
+    await event.reply(f'{triple_backticks}{trash_animation}{triple_backticks}')
+
+*Using HTML formatting:*
+
+.. code-block:: python
+
+    from trashguy import TrashGuy, Symbols
+    import asyncio
+
+    # {client and handler code omitted}
+
+    user_input = event.message.text  # input from a given message
+
+    trash_animation = TrashGuy(user_input, wrapper=Symbols.HTML_CODE)
+
+    for frame in trash_animation:
+        asyncio.sleep(0.4)
+        await event.edit(frame)  # each frame output as <code>{frame}</code>
 
 |
 
 Environment Setup
 =================
 
-.. highlights::
-    The environment setup steps are separated into three sections, the Text Editor, the Python Platform and the Operating System. Please follow the instructions for each part of the three sections that applies to you in the given order of setup.
+The environment setup steps are separated into three sections, the Text Editor, the Python Platform and the Operating System. Please follow the instructions for each part of the three sections that applies to you in the given order of setup.
+
+.. contents::
+   :local:
 
 Text Editors
 ------------
@@ -198,7 +264,7 @@ To confirm that the default encoding has been successfully set, use the code in 
 
 Android
 ^^^^^^^
-    The Android platform default is always UTF-8, however, if the code file does not display correctly, it may have been corrupted. 
+    The Android platform default is always UTF-8, however, if the code file does not display correctly, it may have been corrupted.
     Try re-downloading it and try again. If that does not solve the problem, refer to the help documentation of the specific application/terminal emulator you are using with regards default encoding.
 
 MacOS
@@ -243,16 +309,16 @@ If you rewrite this software in a different programming language or create a der
 ---------------------------
 *Feel free to donate so we can get some marshmallows* 😁
 
-===================  ====
+===================  ===================================================================================
 **Donation Method**  **Details**
--------------------  ----
+-------------------  -----------------------------------------------------------------------------------
      Amazon          💳 `Donate a Gift Card`_! *(Currently only accepting Amazon.de Gift Cards in Euros)*
 
                      Click on **Email** and send to **z_donate@protonmail.ch**
 
                      Or, click on **Share via messaging** and send to **https://t.me/Zacci**
     Bitcoin          1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC
-===================  ====
+===================  ===================================================================================
 
 |
 

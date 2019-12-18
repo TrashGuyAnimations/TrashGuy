@@ -2,7 +2,7 @@
 #                Trash Guy Animation                #
 #                     (> ^_^)>                      #
 #              Made by Zac (t.me/Zacci)             #
-#               Version 4.0.0+20191218              #
+#               Version 4.0.1+20191218              #
 #         Donate:                                   #
 #         1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC        #
 # ================================================= #
@@ -32,4 +32,4 @@
 # ================================================= #
 
 # Versions should comply with PEP440.
-__version__ = '4.0.0'
+__version__ = '4.0.1'

@@ -2,7 +2,7 @@
 #                Trash Guy Animation                #
 #                     (> ^_^)>                      #
 #              Made by Zac (t.me/Zacci)             #
-#               Version 4.0.0+20191218              #
+#               Version 4.0.1+20191218              #
 #         Donate:                                   #
 #         1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC        #
 # ================================================= #
@@ -31,12 +31,12 @@
 #                                                   #
 # ================================================= #
 import sys
-from .trashguy import TrashGuy, Symbols
+from .trashguy import TrashGuy
 
 
 def main(trash_items):
     print(TrashGuy(*trash_items))
 
 
-cmd_input = sys.argv[1:]
-main(cmd_input)
+CMD_LINE = sys.argv[1:]
+main(CMD_LINE)
