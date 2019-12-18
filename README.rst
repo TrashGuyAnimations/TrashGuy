@@ -342,7 +342,7 @@ Special thanks to the folks down at `Telethon Off-topic <https://t.me/telethonof
 .. |lic| image:: https://img.shields.io/github/license/trash-guy/TrashGuy
     :target: https://github.com/trash-guy/TrashGuy/blob/master/LICENSE
 
-.. |ver| image:: https://img.shields.io/badge/version-4.0.0+20191218-orange
+.. |ver| image:: https://img.shields.io/badge/version-4.0.1+20191218-orange
     :target: https://github.com/trash-guy/TrashGuy/
 
 .. |pyver| image:: https://img.shields.io/pypi/v/trashguy
