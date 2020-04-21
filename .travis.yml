@@ -1,4 +1,6 @@
 ﻿language: python
-
+os:
+  - linux
+dist: xenial
 script:
-  - python -m trashguy 🍓🍊🍅
+  - "python -m trashguy \U0001f353\U0001f34a\U0001f345"
