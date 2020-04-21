@@ -1,0 +1,4 @@
+﻿language: python
+
+script:
+  - python -m trashguy 🍓🍊🍅
