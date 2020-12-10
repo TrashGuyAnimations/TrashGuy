@@ -37,7 +37,7 @@ def generate_lut(rng: int) -> tuple:
     prev = 0
     for i in range(rng):
       x = i * 2 + 7
-      for _ in range(prev, prev+x):
+      for _ in range(prev, prev + x):
          output.append(tuple([i, x]))
       prev += x
     return tuple(output)
