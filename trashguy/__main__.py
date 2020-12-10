@@ -33,7 +33,7 @@
 #                                                   #
 # ================================================= #
 import sys
-from .trashguy import TrashGuy, Symbols
+from .trashguy import TrashGuy
 
 
 def main(trash_items):
