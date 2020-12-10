@@ -41,6 +41,7 @@ setup(
     packages=find_packages(),
     license='MIT',
     description='The original Trash Guy animation!',
+    long_description='A fun line-based text animation for all your trash disposal needs! Written in Python, this module has full Unicode support. It can be accessed from the command line directly or used as part of your scripts (i.e., chatbot plugin, loading animations, website widget, etc.)',
     author='Zac',
     author_email='trashguy@zac.cy',
     url='https://github.com/trash-guy/TrashGuy',
