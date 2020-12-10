@@ -5,6 +5,8 @@
 ====================================================
 The original Trash Guy animation!
 ====================================================
+A fun line-based text animation for all your trash disposal needs! Written in Python, this module has full Unicode and emoji support. It can be accessed from the command line directly or used as part of your scripts (i.e., chatbot plugin, loading animations, website widget, etc.)
+
 .. contents:: Contents
    :local:
    :depth: 1
