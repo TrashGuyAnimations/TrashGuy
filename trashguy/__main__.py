@@ -2,7 +2,7 @@
 #                Trash Guy Animation                #
 #                     (> ^_^)>                      #
 #           Made by Zac (trashguy@zac.cy)           #
-#               Version 4.1.0+20201210              #
+#               Version 4.1.0.20201210              #
 #         Donate:                                   #
 #         12Na1AmuGMCQYsxwM7ZLSr1sgfZacZFYxa        #
 # ================================================= #

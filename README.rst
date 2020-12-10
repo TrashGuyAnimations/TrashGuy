@@ -321,7 +321,7 @@ Special thanks to all the folks down on Telegram for their help and support (and
 .. |lic| image:: https://img.shields.io/github/license/trash-guy/TrashGuy
     :target: https://github.com/trash-guy/TrashGuy/blob/master/LICENSE
 
-.. |ver| image:: https://img.shields.io/badge/version-4.1.0+20201210-orange
+.. |ver| image:: https://img.shields.io/badge/version-4.1.0.20201210-orange
     :target: https://github.com/trash-guy/TrashGuy/
 
 .. |pyver| image:: https://img.shields.io/pypi/v/trashguy
