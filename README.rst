@@ -3,7 +3,7 @@
 |logo| |ver| |pyver| |lic| |build| |code| |size| |status| |lastcom| |platforms| |chat| |donations| |btc| |badgecount|
 
 ====================================================
-The original Trash Guy animation, written in Python!
+The original Trash Guy animation!
 ====================================================
 .. contents:: Contents
    :local:
@@ -32,20 +32,11 @@ Input Arguments
 ===================  ================  =============================================================  ======================
 **Input Arguments**  **Accepts**       **Description**                                                **Default Value**
 -------------------  ----------------  -------------------------------------------------------------  ----------------------
-trash_items          String arguments  The item(s) for throwing away 1 character at a time            N/a
-sprite_can           String            The emoji/string to be used as the trash can                   Symbols.SPRITE_CAN
-sprite_left          String            The string to be used for the left-facing trash guy            Symbols.SPRITE_LEFT
-sprite_right         String            The string to be used for the right-facing trash guy           Symbols.SPRITE_RIGHT
+trash_items          Tuple[str, ...]   The item(s) for throwing away 1 character at a time            N/a
+glyph_can            String            The emoji/string to be used as the trash can                   Symbols.GLYPH_CAN
+glyph_left           String            The string to be used for the left-facing trash guy            Symbols.GLYPH_LEFT
+glyph_right          String            The string to be used for the right-facing trash guy           Symbols.GLYPH_RIGHT
 spacer               String            The character/string to be used for spacing the canvas         Symbols.SPACER_DEFAULT
-wrapper              String or         The character/string to be used for wrapping each frame        N/a
-                     Tuple[str,str]    of the animation for use with markdown/HTML formatting
-                                       If provided as a single string, each frame will be
-                                       pre-pended and appended with the same character.
-                                       i.e. ``wrapper="A"`` becomes ``"A{frame}A"``
-                                       If provided as a tuple of two strings, each frame will
-                                       be pre-pended with the first string and appended to
-                                       with the second string.
-                                       i.e. ``wrapper=("<b>", "</b>")`` becomes ``"<b>{frame}</b>"``
 ===================  ================  =============================================================  ======================
 
 Symbols Class
@@ -56,19 +47,12 @@ Symbols Class
 ==============  ========  =====================  ========================
 **Symbols**     **Type**  **Value**              **Rendered As**
 --------------  --------  ---------------------  ------------------------
-DEFAULT_INPUT   Tuple     ("\\U0001F353",         "🍓🍊🍅"
-                          "\\U0001F34A",
-                          "\\U0001F345")
 SPACER_DEFAULT  String    "\\u0020"              " "
 SPACER_WIDE     String    "\\u2800\\u0020"       "⠀ "
 SPACER_EMOJI    String    "\\u2796"              "➖"
-MARKDOWN_CODE   String    "`````"                ```{frame}```
-MARKDOWN_PRE    String    "```````"              `````{frame}`````
-HTML_CODE       Tuple     ("<code>", "</code>")  ``<code>{frame}</code>``
-HTML_PRE        Tuple     ("<pre>", "</pre>")    ``<pre>{frame}</pre>``
-SPRITE_CAN      String    "\\U0001F5D1"          "🗑"
-SPRITE_LEFT     String    "<(^_^ <)"
-SPRITE_RIGHT    String    "(> ^_^)>"
+GLYPH_CAN       String    "\\U0001F5D1"          "🗑"
+GLYPH_LEFT      String    "<(^_^ <)"
+GLYPH_RIGHT     String    "(> ^_^)>"
 ==============  ========  =====================  ========================
 
 Usage Examples
@@ -78,7 +62,7 @@ Usage Examples
 
 .. code-block:: bash
 
-    python -m trashguy ABC
+    python -m trashguy A B C
 
 **Python module:**
 
@@ -87,7 +71,7 @@ Usage Examples
     from trashguy import TrashGuy
 
     print(TrashGuy('ABC'))
-    print(TrashGuy('📂', '📊', '✉️'))
+    print(TrashGuy(['📂', '📊', '✉️']))
 
 **Python module as iterator:**
 
@@ -95,9 +79,9 @@ Usage Examples
 
     from trashguy import TrashGuy
 
-    trash_guy = TrashGuy('ABC')
+    animation = TrashGuy('ABC')
 
-    for frame in trash_guy:
+    for frame in animation:
         print(frame)
 
 **Telegram user-bot plugin:**
@@ -111,13 +95,13 @@ Usage Examples
 
     user_input = event.message.text  # input from a given message
 
-    trash_animation = TrashGuy(user_input,
-                               spacer=Symbols.SPACER_WIDE,
-                               wrapper=Symbols.MARKDOWN_CODE)
+    animation = TrashGuy(user_input,
+                         spacer=Symbols.SPACER_WIDE)  # use wide spacer for better viewing
 
-    for frame in trash_animation:
+    for frame in animation:
         asyncio.sleep(0.4)  # external library for sleeping between frames
-        await event.edit(frame)  # plays back the animation frame by frame in real time
+        wrapped = f'`{frame}`'  # Wrap in backticks for monocode font
+        await event.edit(wrapped)  # plays back the animation frame by frame in real time
 
 *Setting custom symbols with keyword arguments and printing as a newline-joined string:*
 
@@ -130,18 +114,14 @@ Usage Examples
 
     user_input = event.message.text  # input from a given message
 
-    trash_animation = TrashGuy(user_input,
-                               sprite_can='\u2A06',
-                               sprite_left='<(-.- <)',
-                               sprite_right='(> -.-)>',
+    animation = TrashGuy(user_input,
+                               glyph_can='\u2A06',
+                               glyph_left='<(-.- <)',
+                               glyph_right='(> -.-)>',
                                spacer=Symbols.SPACER_EMOJI)
 
     # outputs entire animation with each frame separated by newline with pre-formatted code block markdown
-    triple_backticks = Symbols.MARKDOWN_PRE
-
-    # equivalent to
-    # event.reply(f'```{trash_animation}```')
-    await event.reply(f'{triple_backticks}{trash_animation}{triple_backticks}')
+    await event.reply(f'```{animation}```')
 
 *Using HTML formatting:*
 
@@ -154,11 +134,11 @@ Usage Examples
 
     user_input = event.message.text  # input from a given message
 
-    trash_animation = TrashGuy(user_input, wrapper=Symbols.HTML_CODE)
+    animation = TrashGuy(user_input)
 
-    for frame in trash_animation:
+    for frame in animation:
         asyncio.sleep(0.4)
-        await event.edit(frame)  # each frame output as <code>{frame}</code>
+        await event.edit(f'<code>{frame}</code>')
 
 |
 
@@ -219,7 +199,7 @@ If that still fails also, try selecting ``Convert to UTF-8-BOM`` instead, and sa
 
 Python Platform
 ---------------
-Trash Guy Script was written in ``Python 3.6.3``.
+Trash Guy Script was written in ``Python 3.7.8``.
 Backwards compatibility has not yet been tested.
 
 To get your current python version type into the terminal:
@@ -302,7 +282,7 @@ If you rewrite this software in a different programming language or create a der
 
 .. highlights::
 
-    This work is based on the original TrashGuy animation (https://github.com/trash-guy/TrashGuy) written by Zac (https://t.me/Zacci).
+    This work is based on the original TrashGuy animation (https://github.com/trash-guy/TrashGuy) written by Zac (trashguy@zac.cy).
 
 
 *Really* like what you see?
@@ -317,18 +297,15 @@ If you rewrite this software in a different programming language or create a der
                      Click on **Email** and send to **z_donate@protonmail.ch**
 
                      Or, click on **Share via messaging** and send to **https://t.me/Zacci**
-    Bitcoin          1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC
+    Bitcoin          12Na1AmuGMCQYsxwM7ZLSr1sgfZacZFYxa ( it has 'Zac' in it :D )
 ===================  ===================================================================================
 
 |
 
 ⭐️ Supporters and Contributors
 ===============================
-`YouTwitFace`_ | Modified I/O for use with Telegram `(TrashGuy v2.0.0) <https://t.me/zncode/285>`_
+Special thanks to all the folks down on Telegram for their help and support (and patience) - you know who you are!! >_>
 
-Special thanks to the folks down at `Telethon Off-topic <https://t.me/telethonofftopic>`_ for their help and support!
-
-.. _YouTwitFace: http://github.com/YouTwitFace
 .. _`Donate a Gift Card`: https://www.amazon.de/Digitaler-Amazon-Gutschein-Blaues-Amazon/dp/B07Q1JNC7R?language=en_GB
 
 .. |banner| image:: images/banner.png
@@ -342,7 +319,7 @@ Special thanks to the folks down at `Telethon Off-topic <https://t.me/telethonof
 .. |lic| image:: https://img.shields.io/github/license/trash-guy/TrashGuy
     :target: https://github.com/trash-guy/TrashGuy/blob/master/LICENSE
 
-.. |ver| image:: https://img.shields.io/badge/version-4.0.1+20191218-orange
+.. |ver| image:: https://img.shields.io/badge/version-4.1.0+20201210-orange
     :target: https://github.com/trash-guy/TrashGuy/
 
 .. |pyver| image:: https://img.shields.io/pypi/v/trashguy
@@ -363,14 +340,14 @@ Special thanks to the folks down at `Telethon Off-topic <https://t.me/telethonof
 .. |platforms| image:: https://img.shields.io/pypi/pyversions/trashguy
     :target: https://github.com/trash-guy/TrashGuy/blob/master/README.rst#python-platform
 
-.. |donations| image:: https://img.shields.io/badge/donated%20gift%20cards-%E2%82%AC%200.00-yellow
+.. |donations| image:: https://img.shields.io/badge/donated%20gift%20cards-%E2%82%AC%2040.00-yellow
     :target: https://github.com/trash-guy/TrashGuy#really-like-what-you-see
 
-.. |btc| image:: https://img.shields.io/badge/donated%20btc-0.00000%20BTC-lightblue
+.. |btc| image:: https://img.shields.io/badge/donated%20btc-0.00200%20BTC-lightblue
     :target: https://github.com/trash-guy/TrashGuy#really-like-what-you-see
 
-.. |chat| image:: https://img.shields.io/badge/telegram-ZN%20Spam-critical
-    :target: https://t.me/botspamdebug
+.. |chat| image:: https://img.shields.io/badge/telegram-TrashGuy%20Dev-green
+    :target: https://t.me/TrashGuyDev
 
 .. |badgecount| image:: https://img.shields.io/badge/badge%20count-14-blueviolet
     :target: https://shields.io/

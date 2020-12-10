@@ -1,12 +1,12 @@
 ﻿# ================================================= #
 #                Trash Guy Animation                #
 #                     (> ^_^)>                      #
-#              Made by Zac (t.me/Zacci)             #
-#               Version 4.0.1+20191218              #
+#           Made by Zac (trashguy@zac.cy)           #
+#               Version 4.1.0+20201210              #
 #         Donate:                                   #
-#         1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC        #
+#         12Na1AmuGMCQYsxwM7ZLSr1sgfZacZFYxa        #
 # ================================================= #
-# Copyright (C) 2019 Zac (https://t.me/Zacci)       #
+# Copyright (C) 2020 Zac (trashguy@zac.cy)          #
 # Permission is hereby granted, free of charge, to  #
 # any person obtaining a copy of this software and  #
 # associated documentation files (the "Software"),  #
@@ -19,7 +19,9 @@
 # conditions: The above copyright notice and this   #
 # permission notice shall be included in all copies #
 # or substantial portions of the Software.          #
-# ==========================================-====== #
+# ================================================= #
+#
+# ================================================= #
 #    If you rewrite this software in a different    #
 #    programming language or create a derivative    #
 #    work, please be kind and include this notice   #
@@ -27,9 +29,9 @@
 #                                                   #
 #    This work is based on the original TrashGuy    #
 # animation (https://github.com/trash-guy/TrashGuy) #
-#       written by Zac (https://t.me/Zacci).        #
+#         written by Zac (trashguy@zac.cy).         #
 #                                                   #
 # ================================================= #
 
 # Versions should comply with PEP440.
-__version__ = '4.0.1'
+__version__ = '4.1.0'

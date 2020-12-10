@@ -1,12 +1,12 @@
 # ================================================= #
 #                Trash Guy Animation                #
 #                     (> ^_^)>                      #
-#              Made by Zac (t.me/Zacci)             #
-#               Version 4.0.1+20191218              #
+#           Made by Zac (trashguy@zac.cy)           #
+#               Version 4.1.0+20201210              #
 #         Donate:                                   #
-#         1CoRm4mKCUPs5XQnFVSVQ4xGMAp29pyYzC        #
+#         12Na1AmuGMCQYsxwM7ZLSr1sgfZacZFYxa        #
 # ================================================= #
-# Copyright (C) 2019 Zac (https://t.me/Zacci)       #
+# Copyright (C) 2020 Zac (trashguy@zac.cy)          #
 # Permission is hereby granted, free of charge, to  #
 # any person obtaining a copy of this software and  #
 # associated documentation files (the "Software"),  #
@@ -19,7 +19,9 @@
 # conditions: The above copyright notice and this   #
 # permission notice shall be included in all copies #
 # or substantial portions of the Software.          #
-# ==========================================-====== #
+# ================================================= #
+#
+# ================================================= #
 #    If you rewrite this software in a different    #
 #    programming language or create a derivative    #
 #    work, please be kind and include this notice   #
@@ -27,51 +29,40 @@
 #                                                   #
 #    This work is based on the original TrashGuy    #
 # animation (https://github.com/trash-guy/TrashGuy) #
-#       written by Zac (https://t.me/Zacci).        #
+#         written by Zac (trashguy@zac.cy).         #
 #                                                   #
 # ================================================= #
-from typing import Union, Tuple, List, Generator
-from ._types import SpriteVars
-from ._frame_engine import FrameEngine
+from typing import Union, Generator, Tuple
+from ._tgpy_engine import FrameEngine
 
 
+# TrashGuy Python Library Default Symbols
 class Symbols:
-    DEFAULT_INPUT = ('\U0001F353', '\U0001F34A', '\U0001F345')
     SPACER_DEFAULT = '\u0020'
     SPACER_WIDE = '\u2800\u0020'
     SPACER_EMOJI = '\u2796'
-    MARKDOWN_CODE = '`'
-    MARKDOWN_PRE = '```'
-    HTML_CODE = ('<code>', '</code>')
-    HTML_PRE = ('<pre>', '</pre>')
-    SPRITE_CAN = '\U0001F5D1'
-    SPRITE_LEFT = '<(^_^ <)'
-    SPRITE_RIGHT = '(> ^_^)>'
+
+    GLYPH_CAN = '\U0001F5D1'
+    GLYPH_LEFT = '<(^_^ <)'
+    GLYPH_RIGHT = '(> ^_^)>'
 
 
+# TrashGuy Python Library Front-End
 class TrashGuy:
-    def __init__(self, *trash_items: str,
-                 sprite_can: str = Symbols.SPRITE_CAN,
-                 sprite_left: str = Symbols.SPRITE_LEFT,
-                 sprite_right: str = Symbols.SPRITE_RIGHT,
-                 spacer: str = Symbols.SPACER_DEFAULT,
-                 wrapper: Union[str, Tuple[str, str]] = ''):
+    def __init__(self, trash_items: Tuple[str, ...],
+                 glyph_can: str = Symbols.GLYPH_CAN,
+                 glyph_left: str = Symbols.GLYPH_LEFT,
+                 glyph_right: str = Symbols.GLYPH_RIGHT,
+                 spacer: str = Symbols.SPACER_DEFAULT):
 
         if not trash_items:
-            raise TypeError('no trash items given')
-        elif not any(trash_items):
-            raise TypeError('invalid input "'
-                            f'{" ".join([str(i) for i in trash_items])}"')
+            raise ValueError('no items given')
 
-        temp: List[str] = []
-        for item in trash_items:
-            temp += [str(i) for i in item if i != ' ']
-        san_trash_items = tuple(temp)
-
-        sprites = SpriteVars(san_trash_items, sprite_can, sprite_left,
-                             sprite_right, spacer, wrapper)
-
-        self.frame_engine = FrameEngine(sprites)
+        self.frame_engine = FrameEngine(trash_items,
+                                        glyph_can,
+                                        glyph_left,
+                                        glyph_right,
+                                        spacer)
 
         self.index = -1
 
@@ -79,7 +70,7 @@ class TrashGuy:
         return '\n'.join(frame for frame in self)
 
     def __len__(self) -> int:
-        return self.frame_engine.frame_group_values().total_frame_count
+        return self.frame_engine.total_frame_count
 
     def __getitem__(self, i: Union[int, slice]) -> Union[str, Generator]:
         if isinstance(i, slice):
