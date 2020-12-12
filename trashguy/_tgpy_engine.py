@@ -1,12 +1,12 @@
 # ================================================= #
-#                Trash Guy Animation                #
+#                TrashGuy™ Animation                #
 #                     (> ^_^)>                      #
 #           Made by Zac (trashguy@zac.cy)           #
-#               Version 4.1.0.20201210              #
+#               Version 4.1.0+20201212              #
 #         Donate:                                   #
 #         12Na1AmuGMCQYsxwM7ZLSr1sgfZacZFYxa        #
 # ================================================= #
-# Copyright (C) 2020 Zac (trashguy@zac.cy)          #
+# Copyright © 2020 Zac (trashguy@zac.cy)            #
 # Permission is hereby granted, free of charge, to  #
 # any person obtaining a copy of this software and  #
 # associated documentation files (the "Software"),  #
@@ -20,15 +20,23 @@
 # permission notice shall be included in all copies #
 # or substantial portions of the Software.          #
 # ================================================= #
-#
+# TrashGuy™ is an unregistered trademark of         #
+# Zac (trashguy@zac.cy) protected under             #
+# the provisions of Common Law and may not be used  #
+# in the identification of sufficiently similar     #
+# projects with regard the field of trade where     #
+# these would cause confusion or damage to the      #
+# unregistered trademark owner.                     #
+# All text is © Zac (trashguy@zac.cy) unless        #
+# otherwise indicated.                              #
 # ================================================= #
 #    If you rewrite this software in a different    #
 #    programming language or create a derivative    #
 #    work, please be kind and include this notice   #
 #    and the below credit along with the license:   #
 #                                                   #
-#    This work is based on the original TrashGuy    #
-# animation (https://github.com/trash-guy/TrashGuy) #
+#    This work is based on the original TrashGuy™   #
+# Animation (https://github.com/trash-guy/TrashGuy) #
 #         written by Zac (trashguy@zac.cy).         #
 #                                                   #
 # ================================================= #
@@ -148,9 +156,9 @@ class FrameEngine:
                 return ''.join(canvas)
 
             # End of forward motion, look left with item
-            # Set item position in front of trash guy
+            # Set item position in front of guy
             canvas[position - 1] = canvas[last_index]
-            # Set position of trash guy where item was
+            # Set position of guy where item was
             canvas[position] = self.glyph_left
 
             # Snapshot frame looking across at trash can

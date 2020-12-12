@@ -3,7 +3,7 @@
 |logo| |ver| |pyver| |lic| |build| |code| |size| |status| |lastcom| |platforms| |chat| |donations| |btc| |badgecount|
 
 ====================================================
-The original Trash Guy animation!
+The Original TrashGuy™ Animation!
 ====================================================
 A fun line-based text animation for all your trash disposal needs! Written in Python, this module has full Unicode and emoji support. It can be accessed from the command line directly or used as part of your scripts (i.e., chatbot plugin, loading animations, website widget, etc.)
 
@@ -36,8 +36,8 @@ Input Arguments
 -------------------  ----------------  -------------------------------------------------------------  ----------------------
 trash_items          Tuple[str, ...]   The item(s) for throwing away 1 character at a time            N/a
 glyph_can            String            The emoji/string to be used as the trash can                   Symbols.GLYPH_CAN
-glyph_left           String            The string to be used for the left-facing trash guy            Symbols.GLYPH_LEFT
-glyph_right          String            The string to be used for the right-facing trash guy           Symbols.GLYPH_RIGHT
+glyph_left           String            The string to be used for the left-facing guy                  Symbols.GLYPH_LEFT
+glyph_right          String            The string to be used for the right-facing guy                 Symbols.GLYPH_RIGHT
 spacer               String            The character/string to be used for spacing the canvas         Symbols.SPACER_DEFAULT
 ===================  ================  =============================================================  ======================
 
@@ -201,7 +201,7 @@ If that still fails also, try selecting ``Convert to UTF-8-BOM`` instead, and sa
 
 Python Platform
 ---------------
-Trash Guy Script was written in ``Python 3.7.8``.
+The TrashGuy™ Animation module was written in ``Python 3.7.8``.
 Backwards compatibility has not yet been tested.
 
 To get your current python version type into the terminal:
@@ -284,7 +284,7 @@ If you rewrite this software in a different programming language or create a der
 
 .. highlights::
 
-    This work is based on the original TrashGuy animation (https://github.com/trash-guy/TrashGuy) written by Zac (trashguy@zac.cy).
+    This work is based on the original TrashGuy™ Animation (https://github.com/trash-guy/TrashGuy) written by Zac (trashguy@zac.cy).
 
 
 *Really* like what you see?
@@ -307,6 +307,10 @@ If you rewrite this software in a different programming language or create a der
 ⭐️ Supporters and Contributors
 ===============================
 Special thanks to all the folks down on Telegram for their help and support (and patience) - you know who you are!! >_>
+
+|
+
+*TrashGuy™ is an unregistered trademark of Zac (trashguy@zac.cy) protected under the provisions of Common Law and may not be used in the identification of sufficiently similar projects with regard the field of trade where these would cause confusion or damage the trademark of the unregistered trademark owner. All text and images are including the TrashGuy™ (TG) logo are © Zac (trashguy@zac.cy) unless otherwise indicated.*
 
 .. _`Donate a Gift Card`: https://www.amazon.de/Digitaler-Amazon-Gutschein-Blaues-Amazon/dp/B07Q1JNC7R?language=en_GB
 
