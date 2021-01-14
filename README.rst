@@ -304,7 +304,7 @@ Special thanks to all the folks down on Telegram for their help and support (and
 .. |pyver| image:: https://img.shields.io/pypi/v/trashguy
     :target: https://pypi.org/project/trashguy/
 
-.. |code| image:: https://img.shields.io/codacy/grade/db35c54b78f44c3ab59a98bff8e2c47b
+.. |code| image:: https://img.shields.io/codacy/grade/ff6e6515ba5c4ac9bc0cc74c9f3b9957
     :target: https://app.codacy.com/manual/TrashGuyAnimations/TrashGuy
 
 .. |status| image:: https://img.shields.io/pypi/status/trashguy
