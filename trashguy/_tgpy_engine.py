@@ -121,14 +121,14 @@ class FrameEngine:
         # Incrementally removes thrown items from the trash pile
         trunc_items = all_items[item_index:]
 
+        # Current item to be thrown
+        current_item = all_items[item_index]
+
         # The items which have been removed
         remainder_items = all_items[:item_index]
 
         # Length of the missing items (not flattened)
         missing_items_len = len(''.join(remainder_items))
-
-        # Length of the current item
-        current_len = len(current_item)
 
         # Calculate the padding based on missing items to keep truncated trash
         # in the same position as things get thrown away
