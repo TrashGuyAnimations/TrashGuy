@@ -52,7 +52,7 @@ class FrameEngine:
         # Map the given index to variables needed for the specific frame
         item_index = 0
         group_length = 7
-        # Attempt to look up the index first in a fast loop for indices under 160
+        # Attempt to look up the index first in a loop for indices under 160
         if index < 160:
             previous_index = 7
             # Modified on original code provided by Painor (github.com/painor)
@@ -82,7 +82,7 @@ class FrameEngine:
             # Calculate the forward direction with index-to-apogee relation
             forward = index < fg_size_median
 
-        # Subsequent frame groups require compensation of previous frame group sums
+        # Subsequent groups require compensation of previous frame group sums
         else:
             # These equations were written with the help of AI and algorithms
             all_sum = self.min_fg_size + group_length
@@ -90,14 +90,15 @@ class FrameEngine:
             # The sum of frames from all previous frame groups
             previous_frames_sum = all_sum // 2 * item_index
 
-            # The current frame index minus the sum of frames from all previous frame groups
-            # to calculate for our relative position within the current frame group
+            # Current frame index minus sum of frames from all
+            # previous frame groups to calculate for relative position
+            # within the current frame group
             relative_index = index - previous_frames_sum
 
-            # Calculate the forward direction with relative-index-to-apogee relation
+            # Calculate the forward direction with relative-index-to-apogee
             forward = relative_index < fg_size_median
 
-        # Define where the position should be based on forwards or backwards direction
+        # Define the position based on forwards or backwards direction
         if forward:
             position = relative_index + 2
         else:
@@ -164,8 +165,7 @@ class FrameEngine:
 
         # Reverse motion, going left <(^_^ <)
         else:
-            if position > 0:
-            # Going left with item towards trash can
+            if position > 0:  # Going left with item towards trash can
                 canvas[position] = self.glyph_left
                 # Place item in front while not yet at the trash can
                 if canvas[position - 1] != self.glyph_can:
