@@ -1,6 +1,6 @@
 ﻿|banner|
 
-|logo| |ver| |pyver| |lic| |build| |code| |size| |status| |lastcom| |platforms| |chat| |donations| |btc| |badgecount|
+|logo| |pyver| |lic| |build| |code| |size| |status| |lastcom| |platforms| |chat| |badgecount|
 
 ====================================================
 The Original TrashGuy™ Animation!
@@ -23,7 +23,7 @@ Or if cloning from repo:
 
 .. code-block:: bash
 
-    git clone https://github.com/trash-guy/TrashGuy.git
+    git clone https://github.com/TrashGuyAnimations/TrashGuy.git
 
     python setup.py install
 
@@ -117,10 +117,10 @@ Usage Examples
     user_input = event.message.text  # input from a given message
 
     animation = TrashGuy(user_input,
-                               glyph_can='\u2A06',
-                               glyph_left='<(-.- <)',
-                               glyph_right='(> -.-)>',
-                               spacer=Symbols.SPACER_EMOJI)
+                         glyph_can='\u2A06',
+                         glyph_left='<(-.- <)',
+                         glyph_right='(> -.-)>',
+                         spacer=Symbols.SPACER_EMOJI)
 
     # outputs entire animation with each frame separated by newline with pre-formatted code block markdown
     await event.reply(f'```{animation}```')
@@ -280,28 +280,6 @@ Like what you see?
 ==================
 ⭐️ Star the repository and share with your friends! ⭐️
 
-If you rewrite this software in a different programming language or create a derivative work, please be kind and include this notice and the below credit along with the license:
-
-.. highlights::
-
-    This work is based on the original TrashGuy™ Animation (https://github.com/trash-guy/TrashGuy) written by Zac (trashguy@zac.cy).
-
-
-*Really* like what you see?
----------------------------
-*Feel free to donate so we can get some marshmallows* 😁
-
-===================  ===================================================================================
-**Donation Method**  **Details**
--------------------  -----------------------------------------------------------------------------------
-     Amazon          💳 `Donate a Gift Card`_! *(Currently only accepting Amazon.de Gift Cards in Euros)*
-
-                     Click on **Email** and send to **z_donate@protonmail.ch**
-
-                     Or, click on **Share via messaging** and send to **https://t.me/Zacci**
-    Bitcoin          12Na1AmuGMCQYsxwM7ZLSr1sgfZacZFYxa ( it has 'Zac' in it :D )
-===================  ===================================================================================
-
 |
 
 ⭐️ Supporters and Contributors
@@ -312,48 +290,37 @@ Special thanks to all the folks down on Telegram for their help and support (and
 
 *TrashGuy™ is an unregistered trademark of Zac (trashguy@zac.cy) protected under the provisions of Common Law and may not be used in the identification of sufficiently similar projects with regard the field of trade where these would cause confusion or damage the trademark of the unregistered trademark owner. All text and images are including the TrashGuy™ (TG) logo are © Zac (trashguy@zac.cy) unless otherwise indicated.*
 
-.. _`Donate a Gift Card`: https://www.amazon.de/Digitaler-Amazon-Gutschein-Blaues-Amazon/dp/B07Q1JNC7R?language=en_GB
-
 .. |banner| image:: images/banner.png
 
 .. |logo| image:: https://img.shields.io/badge/%F0%9F%97%91%EF%B8%8F-%3C%28%5E__%5E%20%3C%29-black
-    :target: https://travis-ci.com/trash-guy/TrashGuy
+    :target: https://travis-ci.com/TrashGuyAnimations/TrashGuy
 
-.. |build| image:: https://travis-ci.com/trash-guy/TrashGuy.svg?branch=master
-    :target: https://travis-ci.com/trash-guy/TrashGuy
+.. |build| image:: https://travis-ci.com/TrashGuyAnimations/TrashGuy.svg?branch=master
+    :target: https://travis-ci.com/TrashGuyAnimations/TrashGuy
 
-.. |lic| image:: https://img.shields.io/github/license/trash-guy/TrashGuy
-    :target: https://github.com/trash-guy/TrashGuy/blob/master/LICENSE
-
-.. |ver| image:: https://img.shields.io/badge/version-4.1.0.20201210-orange
-    :target: https://github.com/trash-guy/TrashGuy/
+.. |lic| image:: https://img.shields.io/github/license/TrashGuyAnimations/TrashGuy
+    :target: https://github.com/TrashGuyAnimations/TrashGuy/blob/master/LICENSE
 
 .. |pyver| image:: https://img.shields.io/pypi/v/trashguy
     :target: https://pypi.org/project/trashguy/
 
 .. |code| image:: https://img.shields.io/codacy/grade/db35c54b78f44c3ab59a98bff8e2c47b
-    :target: https://app.codacy.com/manual/trash-guy/TrashGuy
+    :target: https://app.codacy.com/manual/TrashGuyAnimations/TrashGuy
 
 .. |status| image:: https://img.shields.io/pypi/status/trashguy
     :target: https://pypi.org/project/trashguy/
 
-.. |size| image:: https://img.shields.io/github/repo-size/trash-guy/TrashGuy
-    :target: https://github.com/trash-guy/TrashGuy/
+.. |size| image:: https://img.shields.io/github/repo-size/TrashGuyAnimations/TrashGuy
+    :target: https://github.com/TrashGuyAnimations/TrashGuy/
 
-.. |lastcom| image:: https://img.shields.io/github/last-commit/trash-guy/trashguy
-    :target: https://travis-ci.com/trash-guy/TrashGuy
+.. |lastcom| image:: https://img.shields.io/github/last-commit/TrashGuyAnimations/trashguy
+    :target: https://travis-ci.com/TrashGuyAnimations/TrashGuy
 
 .. |platforms| image:: https://img.shields.io/pypi/pyversions/trashguy
-    :target: https://github.com/trash-guy/TrashGuy/blob/master/README.rst#python-platform
-
-.. |donations| image:: https://img.shields.io/badge/donated%20gift%20cards-%E2%82%AC%2040.00-yellow
-    :target: https://github.com/trash-guy/TrashGuy#really-like-what-you-see
-
-.. |btc| image:: https://img.shields.io/badge/donated%20btc-0.00200%20BTC-lightblue
-    :target: https://github.com/trash-guy/TrashGuy#really-like-what-you-see
+    :target: https://github.com/TrashGuyAnimations/TrashGuy/blob/master/README.rst#python-platform
 
 .. |chat| image:: https://img.shields.io/badge/telegram-TrashGuy%20Dev-green
     :target: https://t.me/TrashGuyDev
 
-.. |badgecount| image:: https://img.shields.io/badge/badge%20count-14-blueviolet
+.. |badgecount| image:: https://img.shields.io/badge/badge%20count-11-blueviolet
     :target: https://shields.io/
