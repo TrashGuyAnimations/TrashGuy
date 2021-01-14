@@ -120,9 +120,6 @@ class FrameEngine:
         # Incrementally removes thrown items from the trash pile
         trunc_items = all_items[item_index:]
 
-        # Current item to be thrown
-        current_item = all_items[item_index]
-
         # The items which have been removed
         remainder_items = all_items[:item_index]
 
