@@ -298,7 +298,7 @@ Special thanks to all the folks down on Telegram for their help and support (and
 .. |build| image:: https://travis-ci.com/TrashGuyAnimations/TrashGuy.svg?branch=master
     :target: https://travis-ci.com/TrashGuyAnimations/TrashGuy
 
-.. |lic| image:: https://img.shields.io/github/license/TrashGuyAnimations/TrashGuy
+.. |lic| image:: https://img.shields.io/pypi/l/trashguy
     :target: https://github.com/TrashGuyAnimations/TrashGuy/blob/master/LICENSE
 
 .. |pyver| image:: https://img.shields.io/pypi/v/trashguy
