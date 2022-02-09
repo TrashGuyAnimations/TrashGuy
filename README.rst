@@ -27,6 +27,10 @@ Or if cloning from repo:
 
     python setup.py install
 
+**Or download the project files directly from PyPI here:** https://pypi.org/project/trashguy/#files
+
+|
+
 Brief Documentation
 ===================
 Input Arguments
@@ -56,6 +60,8 @@ GLYPH_CAN       String    "\\U0001F5D1"          "🗑"
 GLYPH_LEFT      String    "<(^_^ <)"
 GLYPH_RIGHT     String    "(> ^_^)>"
 ==============  ========  =====================  ========================
+
+|
 
 Usage Examples
 ==============
@@ -222,6 +228,8 @@ Check the output of this command, it should say ``utf-8``.
 
 **If it returns any other value, try to set the default encoding with one of the following platform specific methods:**
 
+|
+
 Operating Systems
 -----------------
 Linux
@@ -279,6 +287,8 @@ To confirm that the default encoding has been successfully set, use the code in 
 Like what you see?
 ==================
 ⭐️ Star the repository and share with your friends! ⭐️
+
+For more TrashGuy related projects, visit the official `TrashGuy web-page <https://zac.cy/trashguy/?trash=TrashGuy>`_!
 
 |
 
